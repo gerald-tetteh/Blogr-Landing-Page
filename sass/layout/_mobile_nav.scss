@@ -1,0 +1,94 @@
+.mobile-nav {
+  @include absoluteCenter;
+  position: fixed;
+  width: 33rem;
+  z-index: 3000;
+  border-radius: $border-radius;
+  background-color: $color-white;
+  box-shadow: 0 1rem 3rem rgba($color-black, 0.3);
+  padding: 1.5rem 3rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.4s;
+
+  &__top, &__bottom {
+    list-style: none;
+    text-align: center;
+    font-family: $ubuntu-font;
+    font-weight: 500;
+    color: $color-dark-grey-blue;
+  }
+
+  &__bottom {
+    border-top: 1px solid rgba($color-black, 0.1);
+  }
+
+  &__item {
+    font-size: 2.5rem;
+    padding: 2rem 0;
+    text-align: center;
+    cursor: pointer;
+
+    &-icon {
+      margin-left: 0.5rem;
+      font-size: 1.5rem;
+      color: $color-red-light-2;
+      transition: all 0.4s;
+    }
+
+    &-label {
+      margin-top: 2.3rem;
+      max-height: unset;
+      padding: 2rem;
+    }
+
+    & input:checked ~ .mobile-nav__dropdown__list {
+      margin-top: 2.3rem;
+      max-height: unset;
+      padding: 2.5rem;
+    }
+    & input:checked ~ label i {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__dropdown__list {
+    color: rgba($color-dark-grey-blue,0.8);
+    list-style: none;
+    font-size: 1.9rem;
+    background-color: rgba($color-dark-grey-blue,0.1);
+    border-radius: $border-radius;
+    transition: all 0.3s;
+    max-height: 0;
+    padding: 0;
+    overflow: hidden;
+
+    &-item {
+      padding: 1rem;
+    }
+  }
+}
+
+.mobile-button-container {
+  position: absolute;
+  top: 5rem;
+  right: 5rem;
+  z-index: 200;
+  display: none;
+
+  @include respond(tab-port) {
+    display: block;
+  }
+  @include respond(phone) {
+    top: 3.3rem;
+    right: 4rem;
+  }
+}
+#mobile-nav-button:checked ~ .mobile-nav {
+  @include respond(tab-port-reverse) {
+    opacity: 0;
+    visibility: hidden;
+  }
+  visibility: visible;
+  opacity: 1;
+}

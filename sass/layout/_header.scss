@@ -1,0 +1,48 @@
+.header {
+  height: 60rem;
+  position: relative;
+  overflow: hidden;
+  background-image: linear-gradient(to right,hsl(13, 100%, 72%) 0%,hsl(13, 100%, 72%) 30%,hsl(353, 100%, 62%) 60%);
+  border-radius: 0 0 0 10rem;
+  padding: 5rem 15rem;
+  z-index: 2;
+
+  @include respond(phone) {
+    padding: 3rem 3rem;
+  }
+
+  &__image {
+    height: 280rem;
+    position: absolute;
+    top: -115rem;
+    right: -110rem;
+    z-index: 1;
+  }
+
+  &__content {
+    @include absoluteCenter;
+    text-align: center;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  &-heading {
+    margin-bottom: 1rem;
+    color: $color-white;
+    font-size: 6.3rem;
+
+    @include respond(phone) {
+      font-size: 4rem;
+    }
+  }
+
+  &-subheading {
+    color: $color-white;
+    margin-bottom: 5rem;
+  }
+
+  &__buttons {
+    margin-top: 2rem;
+    text-align: center;
+  }
+}

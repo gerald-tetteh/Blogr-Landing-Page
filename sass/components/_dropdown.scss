@@ -1,0 +1,42 @@
+.dropdown {
+  position: relative;
+
+  &:hover &__content {
+    opacity: 1;
+    visibility: visible;
+  }
+  &:hover .nav__link-icon {
+    transform: rotate(180deg);
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &__content {
+    position: absolute;
+    background-color: $color-white;
+    padding: 1.5rem;
+    border-radius: $border-radius;
+    width: 17rem;
+    left: -20%;
+    top: 2rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+  }
+
+  &__list {
+    list-style: none;
+    color: hsl(208, 49%, 24%);
+    font-family: $ubuntu-font;
+
+    &-item {
+      padding: 1rem;
+      cursor: pointer;
+
+      &:hover {
+        font-weight: 700;
+      }
+    }
+  }
+}

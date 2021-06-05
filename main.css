@@ -1,0 +1,275 @@
+/*
+0 - 600px: Phone
+600 - 900px: Tablet portrait
+900 - 1200px: Tablet portrait
+[1200 - 1800px] normal styles
+1800px + Big desktop 
+
+$breakpoint argument choices
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+1em = 16px
+*/
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 43.75%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 37.5%; } }
+
+body {
+  font-size: 1.6rem;
+  box-sizing: border-box;
+  max-width: 144rem;
+  font-family: "Overpass", sans-serif;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%; }
+  @media (max-width: 37.5em) {
+    body {
+      max-width: 37.5rem; } }
+
+.margin-right-small {
+  margin-right: 3rem; }
+
+.dropdown {
+  position: relative; }
+  .dropdown:hover .dropdown__content {
+    opacity: 1;
+    visibility: visible; }
+  .dropdown:hover .nav__link-icon {
+    transform: rotate(180deg); }
+  .dropdown:hover {
+    text-decoration: underline; }
+  .dropdown__content {
+    position: absolute;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 3px;
+    width: 17rem;
+    left: -20%;
+    top: 2rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s; }
+  .dropdown__list {
+    list-style: none;
+    color: #1f3f5b;
+    font-family: "Ubuntu", sans-serif; }
+    .dropdown__list-item {
+      padding: 1rem;
+      cursor: pointer; }
+      .dropdown__list-item:hover {
+        font-weight: 700; }
+
+.btn, .btn:link, .btn:visited {
+  text-decoration: none;
+  padding: 1rem 2.9rem;
+  border: 2px solid white;
+  border-radius: 20px;
+  font-weight: 500;
+  transition: all 0.2s;
+  font-family: "Ubuntu", sans-serif; }
+
+.btn--fill {
+  color: #ff525d;
+  background-color: white; }
+  .btn--fill:hover {
+    background-color: #ff7a85;
+    color: white;
+    border: 2px solid transparent; }
+
+.btn--fill-reverse {
+  color: white;
+  background-color: #ff525d; }
+  .btn--fill-reverse:hover {
+    background-color: white;
+    color: #ff525d;
+    border: 2px solid transparent; }
+
+.btn--outline {
+  color: white; }
+  .btn--outline:hover {
+    background-color: white;
+    color: #ff525d; }
+
+.header {
+  height: 60rem;
+  position: relative;
+  overflow: hidden;
+  background-image: linear-gradient(to right, #ff8f70 0%, #ff8f70 30%, #ff3d54 60%);
+  border-radius: 0 0 0 10rem;
+  padding: 5rem 15rem;
+  z-index: 2; }
+  @media (max-width: 37.5em) {
+    .header {
+      padding: 3rem 3rem; } }
+  .header__image {
+    height: 280rem;
+    position: absolute;
+    top: -115rem;
+    right: -110rem;
+    z-index: 1; }
+  .header__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    padding: 1rem; }
+  .header-heading {
+    margin-bottom: 1rem;
+    color: white;
+    font-size: 6.3rem; }
+    @media (max-width: 37.5em) {
+      .header-heading {
+        font-size: 4rem; } }
+  .header-subheading {
+    color: white;
+    margin-bottom: 5rem; }
+  .header__buttons {
+    margin-top: 2rem;
+    text-align: center; }
+
+.nav {
+  display: flex;
+  justify-content: space-between; }
+  .nav__heading {
+    font-size: 3rem;
+    margin-right: 5rem;
+    color: white;
+    font-weight: 700;
+    font-family: "Ubuntu", sans-serif;
+    z-index: 50;
+    cursor: pointer; }
+  .nav__right {
+    display: flex;
+    z-index: 50; }
+  .nav__left {
+    display: flex;
+    z-index: 50; }
+  .nav__links {
+    list-style: none;
+    display: flex;
+    align-items: flex-end;
+    font-family: "Ubuntu", sans-serif;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 300;
+    cursor: pointer; }
+    .nav__links:hover {
+      color: white; }
+  .nav__link {
+    padding: 0 2rem; }
+    .nav__link-icon {
+      font-size: 1rem;
+      transition: all 0.3s; }
+  @media (max-width: 56.25em) {
+    .nav__links {
+      display: none; } }
+  .nav__blackout {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 3000;
+    visibility: hidden; }
+
+.mobile-nav {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  width: 33rem;
+  z-index: 3000;
+  border-radius: 3px;
+  background-color: white;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
+  padding: 1.5rem 3rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.4s; }
+  .mobile-nav__top, .mobile-nav__bottom {
+    list-style: none;
+    text-align: center;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    color: #4b5862; }
+  .mobile-nav__bottom {
+    border-top: 1px solid rgba(0, 0, 0, 0.1); }
+  .mobile-nav__item {
+    font-size: 2.5rem;
+    padding: 2rem 0;
+    text-align: center;
+    cursor: pointer; }
+    .mobile-nav__item-icon {
+      margin-left: 0.5rem;
+      font-size: 1.5rem;
+      color: #ff7a85;
+      transition: all 0.4s; }
+    .mobile-nav__item-label {
+      margin-top: 2.3rem;
+      max-height: unset;
+      padding: 2rem; }
+    .mobile-nav__item input:checked ~ .mobile-nav__dropdown__list {
+      margin-top: 2.3rem;
+      max-height: unset;
+      padding: 2.5rem; }
+    .mobile-nav__item input:checked ~ label i {
+      transform: rotate(180deg); }
+  .mobile-nav__dropdown__list {
+    color: rgba(75, 88, 98, 0.8);
+    list-style: none;
+    font-size: 1.9rem;
+    background-color: rgba(75, 88, 98, 0.1);
+    border-radius: 3px;
+    transition: all 0.3s;
+    max-height: 0;
+    padding: 0;
+    overflow: hidden; }
+    .mobile-nav__dropdown__list-item {
+      padding: 1rem; }
+
+.mobile-button-container {
+  position: absolute;
+  top: 5rem;
+  right: 5rem;
+  z-index: 200;
+  display: none; }
+  @media (max-width: 56.25em) {
+    .mobile-button-container {
+      display: block; } }
+  @media (max-width: 37.5em) {
+    .mobile-button-container {
+      top: 3.3rem;
+      right: 4rem; } }
+
+#mobile-nav-button:checked ~ .mobile-nav {
+  visibility: visible;
+  opacity: 1; }
+  @media (min-width: 56.25em) {
+    #mobile-nav-button:checked ~ .mobile-nav {
+      opacity: 0;
+      visibility: hidden; } }

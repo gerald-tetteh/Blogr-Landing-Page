@@ -1,0 +1,64 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+
+  &__heading {
+    font-size: 3rem;
+    margin-right: 5rem;
+    color: $color-white;
+    font-weight: 700;
+    font-family: $ubuntu-font;
+    z-index: 50;
+    cursor: pointer;
+  }
+
+  &__right {
+    display: flex;
+    z-index: 50;
+  }
+
+  &__left {
+    display: flex;
+    z-index: 50;
+  }
+
+  &__links {
+    list-style: none;
+    display: flex;
+    align-items: flex-end;
+    font-family: $ubuntu-font;
+    color: rgba($color-white,0.8);
+    font-family: 300;
+    cursor: pointer;
+
+    &:hover {
+      color: $color-white;
+    }
+  }
+
+  &__link {
+    padding: 0 2rem;
+
+    &-icon {
+      font-size: 1rem;
+      transition: all 0.3s;
+    }
+  }
+
+  &__links {
+    @include respond(tab-port) {
+      display: none;
+    }
+  }
+
+  &__blackout {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color-black,0.4);
+    z-index: 3000;
+    visibility: hidden;
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "blogr-landing-page-main",
+  "version": "1.0.0",
+  "description": "Frontend Mentor Blogr Landing Page",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss main.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gerald-tetteh/Blogr-Landing-Page.git"
+  },
+  "keywords": [
+    "HTML",
+    "CSS",
+    "SASS",
+    "frontend",
+    "mentor"
+  ],
+  "author": "Gerald Addo-Tetteh",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^6.0.0"
+  }
+}
