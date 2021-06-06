@@ -30,7 +30,7 @@ $breakpoint argument choices
     @media (max-width: 56.25em) { @content }; // 900px
   }
   @if $breakPoint == tab-port-reverse {
-    @media (min-width: 56.25em) { @content }; // 900px min-width
+    @media (min-width: 56.3125em) { @content }; // 900px min-width
   }
   @if $breakPoint == tab-land {
     @media (max-width: 75em) { @content }; // 1200px

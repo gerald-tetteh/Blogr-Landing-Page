@@ -8,11 +8,11 @@
 
   @include respond(tab-land) {
     background-size: 55%;
-    background-position: 135% 12rem;
+    background-position: 136% 12rem;
   }
   @include respond(tab-port) {
     background-image: url(images/illustration-editor-mobile.svg);
-    background-position: 115% 65%;
+    background-position: 115% 55%;
   }
   @include respond(phone) {
     padding: 4rem;
@@ -21,6 +21,8 @@
     background-position: center 12%;
     margin-top: 5rem;
   }
+
+  padding-bottom: 25rem;
 
   &__content {
     display: flex;
@@ -37,6 +39,78 @@
     @include respond (phone) {
       width: 100%;
       margin-top: 24rem;
+    }
+  }
+}
+
+.section-art {
+  background-image: url(images/bg-pattern-circles.svg), linear-gradient(to right,hsl(237, 17%, 21%),hsl(237, 23%, 32%));
+  background-repeat: no-repeat;
+  background-position: 
+  -18rem -53rem,
+  center center;
+  padding: 7rem 15rem;
+  display: flex;
+  position: relative;
+  justify-content: flex-end;
+  border-radius: 0 10rem 0 10rem;
+
+  @include respond(tab-land) {
+    background-position: 
+    -35rem -75rem,
+    center center;
+  }
+  @include respond(phone) {
+    flex-direction: column;
+    background-position: -11rem -22rem, center;
+    padding: 4rem;
+    justify-content: center;
+    margin-top: 13rem;
+    background-size: 57rem, cover;
+  }
+
+  &__right {
+    align-self: center;
+    width: 45%;
+
+    @include respond(phone) {
+      width: 100%;
+      text-align: center;
+      margin-top: 16rem;
+    }
+
+    & h2 {
+      font-size: 3.5rem;
+    }
+  }
+  &__left {
+    position: absolute;
+    top: -19%;
+    left: 10%;
+
+    @include respond(tab-land) {
+      top: -18%;
+      left: 5%;
+    }
+    @include respond(tab-port) {
+      top: 0%;
+    }
+    @include respond(phone) {
+      left: 5%;
+      top: -25%;
+    }
+  }
+
+  &__image {
+    @include respond(tab-land) {
+      max-height: 57rem;
+      height: 95%;
+    }
+    @include respond(tab-port) {
+      max-height: 45rem;
+    }
+    @include respond(phone) {
+      max-height: 35rem;
     }
   }
 }
