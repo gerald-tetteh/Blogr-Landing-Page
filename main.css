@@ -46,8 +46,36 @@ body {
     body {
       max-width: 37.5rem; } }
 
+.heading-secondary {
+  color: #1f3f5b;
+  font-size: 3rem; }
+  @media (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 2.8rem; } }
+
+.heading-tertiary {
+  color: #1f3f5b;
+  font-size: 2rem; }
+  @media (max-width: 37.5em) {
+    .heading-tertiary {
+      font-size: 3rem; } }
+
+.body-text {
+  font-weight: 300;
+  color: #4b5862;
+  font-family: "Overpass", sans-serif;
+  margin-top: 2rem;
+  margin-bottom: 5.5rem;
+  line-height: 3rem; }
+
 .margin-right-small {
   margin-right: 3rem; }
+
+.margin-bottom-large {
+  margin-bottom: 10rem; }
+
+.center-text {
+  text-align: center; }
 
 .dropdown {
   position: relative; }
@@ -273,3 +301,38 @@ body {
     #mobile-nav-button:checked ~ .mobile-nav {
       opacity: 0;
       visibility: hidden; } }
+
+.section-design {
+  padding: 15rem 15rem;
+  background-image: url(images/illustration-editor-desktop.svg);
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: 65%;
+  background-position: 155% 5rem; }
+  @media (max-width: 75em) {
+    .section-design {
+      background-size: 55%;
+      background-position: 135% 12rem; } }
+  @media (max-width: 56.25em) {
+    .section-design {
+      background-image: url(images/illustration-editor-mobile.svg);
+      background-position: 115% 65%; } }
+  @media (max-width: 37.5em) {
+    .section-design {
+      padding: 4rem;
+      text-align: center;
+      background-size: 90%;
+      background-position: center 12%;
+      margin-top: 5rem; } }
+  .section-design__content {
+    display: flex;
+    justify-content: space-between; }
+    @media (max-width: 37.5em) {
+      .section-design__content {
+        flex-direction: column-reverse; } }
+  .section-design__right {
+    width: 50%; }
+    @media (max-width: 37.5em) {
+      .section-design__right {
+        width: 100%;
+        margin-top: 24rem; } }

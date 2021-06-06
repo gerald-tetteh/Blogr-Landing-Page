@@ -1,0 +1,26 @@
+.heading-secondary {
+  color: $color-dark-blue;
+  font-size: 3rem;
+
+  @include respond(phone) {
+    font-size: 2.8rem;
+  }
+}
+
+.heading-tertiary {
+  color: $color-dark-blue;
+  font-size: 2rem;
+
+  @include respond(phone) {
+    font-size: 3rem;
+  }
+}
+
+.body-text {
+  font-weight: 300;
+  color: $color-dark-grey-blue;
+  font-family: $overpass-font;
+  margin-top: 2rem;
+  margin-bottom: 5.5rem;
+  line-height: 3rem;
+}
