@@ -1,0 +1,42 @@
+.section-design {
+  padding: 15rem 15rem;
+  background-image: url(images/illustration-editor-desktop.svg);
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: 65%;
+  background-position: 155% 5rem;
+
+  @include respond(tab-land) {
+    background-size: 55%;
+    background-position: 135% 12rem;
+  }
+  @include respond(tab-port) {
+    background-image: url(images/illustration-editor-mobile.svg);
+    background-position: 115% 65%;
+  }
+  @include respond(phone) {
+    padding: 4rem;
+    text-align: center;
+    background-size: 90%;
+    background-position: center 12%;
+    margin-top: 5rem;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+
+    @include respond(phone) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__right {
+    width: 50%;
+
+    @include respond (phone) {
+      width: 100%;
+      margin-top: 24rem;
+    }
+  }
+}
