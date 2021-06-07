@@ -52,6 +52,17 @@
     }
   }
 
+  &__button {
+    &--close,&--open {
+      position: absolute;
+      right: 0.1rem;
+      transition: all 0.4s;
+    }
+    &--close {
+      opacity: 0;
+    }
+  }
+
   &__dropdown__list {
     color: rgba($color-dark-grey-blue,0.8);
     list-style: none;
@@ -90,5 +101,11 @@
     visibility: hidden;
   }
   visibility: visible;
+  opacity: 1;
+}
+#mobile-nav-button:checked + .mobile-button-container .mobile-nav__button .mobile-nav__button--open {
+  opacity: 0;
+}
+#mobile-nav-button:checked + .mobile-button-container .mobile-nav__button .mobile-nav__button--close {
   opacity: 1;
 }

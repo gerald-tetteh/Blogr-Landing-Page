@@ -271,6 +271,12 @@ body {
       padding: 2.5rem; }
     .mobile-nav__item input:checked ~ label i {
       transform: rotate(180deg); }
+  .mobile-nav__button--close, .mobile-nav__button--open {
+    position: absolute;
+    right: 0.1rem;
+    transition: all 0.4s; }
+  .mobile-nav__button--close {
+    opacity: 0; }
   .mobile-nav__dropdown__list {
     color: rgba(75, 88, 98, 0.8);
     list-style: none;
@@ -305,6 +311,12 @@ body {
     #mobile-nav-button:checked ~ .mobile-nav {
       opacity: 0;
       visibility: hidden; } }
+
+#mobile-nav-button:checked + .mobile-button-container .mobile-nav__button .mobile-nav__button--open {
+  opacity: 0; }
+
+#mobile-nav-button:checked + .mobile-button-container .mobile-nav__button .mobile-nav__button--close {
+  opacity: 1; }
 
 .footer {
   display: flex;
