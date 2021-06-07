@@ -19,7 +19,8 @@
     <input type="checkbox" name="mobile-nav" id="mobile-nav-button" hidden>
     <div class="mobile-button-container">
       <label for="mobile-nav-button" class="mobile-nav__button">
-        <img src="images/icon-hamburger.svg" alt="Mobile navigation icon">
+        <img src="images/icon-hamburger.svg" alt="Mobile navigation open icon" class="mobile-nav__button--open">
+        <img src="images/icon-close.svg" alt="Mobile navigation close icon" class="mobile-nav__button--close">
       </label>
     </div>
 
@@ -162,7 +163,61 @@
           </p>
         </div>
       </section>
+
+      <section class="section-laptop">
+        <div class="section-laptop__left"></div>
+        <div class="section-laptop__right">
+          <h3 class="heading-tertiary">Free, open, simple</h3>
+          <p class="body-text">
+            Blogr is a free and open source application backed by a large community of helpful developers. It supports
+            features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting
+            tools,
+            and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
+          </p>
+
+          <h3 class="heading-tertiary">Powerful tooling</h3>
+          <p class="body-text">
+            Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a
+            breeze,
+            but
+            capable of producing even the most complicated sites.
+          </p>
+        </div>
+      </section>
     </main>
+
+    <footer class="footer">
+      <div class="footer__column">
+        <h2 class="footer__brand">Blogr</h2>
+      </div>
+      <div class="footer__column">
+        <p class="footer__column-header">Product</p>
+        <ul class="footer__list">
+          <li class="footer__list-item">Overview</li>
+          <li class="footer__list-item">Pricing</li>
+          <li class="footer__list-item">Marketing</li>
+          <li class="footer__list-item">Features</li>
+          <li class="footer__list-item">Integrations</li>
+        </ul>
+      </div>
+      <div class="footer__column">
+        <p class="footer__column-header">Company</p>
+        <ul class="footer__list">
+          <li class="footer__list-item">About</li>
+          <li class="footer__list-item">Team</li>
+          <li class="footer__list-item">Blog</li>
+          <li class="footer__list-item">Careers</li>
+        </ul>
+      </div>
+      <div class="footer__column">
+        <p class="footer__column-header">Connect</p>
+        <ul class="footer__list">
+          <li class="footer__list-item">Contact</li>
+          <li class="footer__list-item">Newsletter</li>
+          <li class="footer__list-item">LinkedIn</li>
+        </ul>
+      </div>
+    </footer>
 
     <!-- <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.

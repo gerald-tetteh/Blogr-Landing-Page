@@ -1,0 +1,54 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 5rem 15rem;
+  padding-right: 30rem;
+  background-color: $color-dark-black-blue;
+  border-radius: 0 10rem 0 0;
+
+  @include respond(phone) {
+    flex-direction: column;
+    padding: 4rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__brand {
+    font-family: $ubuntu-font;
+    font-size: 3rem;
+    color: $color-white;
+    font-weight: 500;
+
+    @include respond(phone) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__column {
+    font-family: $ubuntu-font;
+    @include respond(phone) {
+      text-align: center;
+    }
+
+    &-header {
+      margin-top: 0.9rem;
+      font-weight: 500;
+      color: rgba($color-white,0.8);
+      font-size: 1.5rem;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    margin-top: 2.5rem;
+    color: rgba($color-white,0.4);
+
+    @include respond(phone) {
+      margin-bottom: 3rem;
+    }
+
+    &-item {
+      margin-bottom: 1.3rem;
+    }
+  }
+}
