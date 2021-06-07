@@ -19,7 +19,7 @@
   ],
   "author": "Gerald Addo-Tetteh",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "node-sass": "^6.0.0"
   }
 }

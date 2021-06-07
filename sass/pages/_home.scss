@@ -114,3 +114,38 @@
     }
   }
 }
+
+.section-laptop {
+  display: flex;
+  justify-content: flex-end;
+  padding: 15rem;
+  background-image: url(images/illustration-laptop-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: -28rem;
+  margin-top: 7rem;
+
+  @include respond(tab-land) {
+    background-size: 68%;
+  }
+  @include respond(tab-port) {
+    background-size: 90%;
+    background-position: -34rem;
+  }
+  @include respond(phone) {
+    background-image: url(images/illustration-laptop-mobile.svg);
+    background-size: 100%;
+    background-position: center -1rem;
+    padding: 4rem;
+    text-align: center;
+  }
+
+  &__right {
+    margin-top: 8rem;
+    width: 50%;
+
+    @include respond(phone) {
+      width: 100%;
+      margin-top: 25rem;
+    }
+  }
+}

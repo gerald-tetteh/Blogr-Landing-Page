@@ -306,6 +306,47 @@ body {
       opacity: 0;
       visibility: hidden; } }
 
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 5rem 15rem;
+  padding-right: 30rem;
+  background-color: #25252d;
+  border-radius: 0 10rem 0 0; }
+  @media (max-width: 37.5em) {
+    .footer {
+      flex-direction: column;
+      padding: 4rem;
+      justify-content: center;
+      align-items: center; } }
+  .footer__brand {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 3rem;
+    color: white;
+    font-weight: 500; }
+    @media (max-width: 37.5em) {
+      .footer__brand {
+        margin-bottom: 4rem; } }
+  .footer__column {
+    font-family: "Ubuntu", sans-serif; }
+    @media (max-width: 37.5em) {
+      .footer__column {
+        text-align: center; } }
+    .footer__column-header {
+      margin-top: 0.9rem;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1.5rem; }
+  .footer__list {
+    list-style: none;
+    margin-top: 2.5rem;
+    color: rgba(255, 255, 255, 0.4); }
+    @media (max-width: 37.5em) {
+      .footer__list {
+        margin-bottom: 3rem; } }
+    .footer__list-item {
+      margin-bottom: 1.3rem; }
+
 .section-design {
   padding: 15rem 15rem;
   background-image: url(images/illustration-editor-desktop.svg);
@@ -397,3 +438,33 @@ body {
   @media (max-width: 37.5em) {
     .section-art__image {
       max-height: 35rem; } }
+
+.section-laptop {
+  display: flex;
+  justify-content: flex-end;
+  padding: 15rem;
+  background-image: url(images/illustration-laptop-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: -28rem;
+  margin-top: 7rem; }
+  @media (max-width: 75em) {
+    .section-laptop {
+      background-size: 68%; } }
+  @media (max-width: 56.25em) {
+    .section-laptop {
+      background-size: 90%;
+      background-position: -34rem; } }
+  @media (max-width: 37.5em) {
+    .section-laptop {
+      background-image: url(images/illustration-laptop-mobile.svg);
+      background-size: 100%;
+      background-position: center -1rem;
+      padding: 4rem;
+      text-align: center; } }
+  .section-laptop__right {
+    margin-top: 8rem;
+    width: 50%; }
+    @media (max-width: 37.5em) {
+      .section-laptop__right {
+        width: 100%;
+        margin-top: 25rem; } }
